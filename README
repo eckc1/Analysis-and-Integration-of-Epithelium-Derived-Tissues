@@ -1,1 +1,37 @@
 
+runCellRanger.sh:
+
+This is a SLURM script for running CellRanger. Config files will need to be created for each set of fastq files. 
+
+
+Generate_SeuratObjects.R:
+
+This script generates seurat objects for each sample using cell ranger output.
+
+
+New_Library_Merge.R:
+
+This script merges the Seurat objects from Generate_SeuratObjects into a single object for downstream analysis. 
+
+
+QC_Filtering.R:
+
+This script takes a merged Seurat object and performs demultiplexing and initial quality control, including doublet removal and standard cell filtering. 
+
+CLEAN_WNN_batch_correction.R: 
+
+This script impletes a WNN framework as well as Harmony batch correction. 
+
+CD4Tcell_Filtering.R:
+
+This script subsets the data to CD4 T cells based on canonical T cell markers. The subsetted data is reclustered.
+
+
+DEG_Analysis.R:
+
+This script performs differential gene expression, psuedobulked by sample. 
+
+
+VDJ_Clean_exlude_GS.R:
+
+This script performs analysis on TCR metadata, focusing on clonotypes that are present across multiple tissues. 
