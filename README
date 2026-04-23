@@ -1,4 +1,3 @@
-
 runCellRanger.sh:
 
 This is a SLURM script for running CellRanger. Config files will need to be created for each set of fastq files. 
